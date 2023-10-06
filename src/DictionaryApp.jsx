@@ -11,12 +11,12 @@ const DictionaryApp = () => {
 
     try {
       const response = await axios.get(
-        // `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-        `https://api.dictionaryapi.dev/api/v2/entries/en/word`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
 
       if (response.data.length > 0) {
         setDefinitions(response.data[0].meanings);
+        console.log(response.data);
       } else {
         setDefinitions([]);
       }
