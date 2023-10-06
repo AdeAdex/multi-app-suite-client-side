@@ -4,7 +4,7 @@ This project consists of three distinct applications, each designed to serve a u
 
 **Jokes App**
 
-Description
+**Description:**
 The Jokes App is a simple web application that provides you with a random joke every time you visit the page. It's a fun and light-hearted way to brighten your day with some humor.
 
 **Features**
@@ -19,7 +19,7 @@ Joke API: The app fetches jokes from the "joke.deno.dev" API.
 
 **Question and Answer Quiz App**
 
-Description
+**Description:**
 The Question and Answer Quiz App is an interactive quiz application that tests your knowledge on a variety of topics. It provides multiple-choice and true/false questions for you to answer and keeps track of your score.
 
 **Features**
@@ -34,7 +34,7 @@ Open Trivia Database API: The app fetches quiz questions from the "opentdb.com" 
 
 **Dictionary App**
 
-Description
+**Description:**
 The Dictionary App is a web application that allows you to search for word definitions and phonetics. It provides detailed information about the word, including its meanings and pronunciations.
 
 **Features**
