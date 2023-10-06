@@ -35,6 +35,10 @@ const DictionaryApp = () => {
   useEffect(() => {
     if (word) {
       fetchData();
+    } else {
+      // Clear definitions and phonetics when the input is empty
+      setDefinitions([]);
+      setPhonetics([]);
     }
   }, [word]);
 
