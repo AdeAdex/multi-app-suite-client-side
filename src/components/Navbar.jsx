@@ -3,39 +3,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // let divStyle = {
-  //   color: "red",
-  //   fontSize: "45px",
-  //   backgroundColor: "green",
-  // };
-
-  // let food = {
-  //   swallow: "Amala",
-  //   soup: "Abula",
-  //   animal: "Ponmo",
-  //   animal2: "Beef",
-  // };
-
-  // let myname = "Adeolu";
-  // let mySchool = "SQI";
-  // let number = 8;
-  // const [first, setfirst] = useState(0);
-  
-
-  // let allStudent = [
-  //   { name: "Adeolu", school: "SQI" },
-  //   { name: "Kunle", school: "Lautech" },
-  // ];
-
-  // const increment = () => {
-  //   setfirst(first + 1);
-  // };
 
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="#">
+      <img src="ade.png" alt=""  style={{width: '50px'}}/>
+    </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -44,7 +19,7 @@ const Navbar = () => {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a className="nav-link" href="#">Sign In</a>
         </li>
         <li className="nav-item dropdown">
@@ -57,9 +32,12 @@ const Navbar = () => {
             <li><hr className="dropdown-divider" /></li>
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
+        </li> */}
+        <li className="nav-item">
+          <Link to="/" className="nav-link">Jokes</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Jokes" className="nav-link">API</Link>
+          <Link to="/quiz" className="nav-link">Quiz</Link>
         </li>
       </ul>
       <form className="d-flex" role="search">

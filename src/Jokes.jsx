@@ -18,25 +18,16 @@ const Jokes = () => {
 
   const getData = () => {
     axios
-      .get(endpoint)
+      .get(endpoint3)
       .then((result) => {
         setresponse(result.data);
-        console.log(result.data);
+        console.log(result);
       })
       .catch((err) => {
         console.error(err);
       });
   };
 
-  // const check = (e) => {
-  //   // alert((e.target.innerText))
-  //   response.map((eachJokes, index) => {
-  //   if (e.target.innerText == (eachJokes.correct_answer)) {
-  //     alert("Correct answer")
-  //     return
-  //   }
-  // })
-  // }
 
   return (
     <>

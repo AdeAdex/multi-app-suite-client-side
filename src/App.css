@@ -1,0 +1,22 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color for the error page */
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-container h1 {
+  font-size: 36px;
+  color: #ff0000; /* Red color for the heading */
+  margin-bottom: 20px;
+}
+
+.error-container p {
+  font-size: 18px;
+  color: #333; /* Text color for the message */
+}
