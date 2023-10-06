@@ -20,6 +20,7 @@ import ErrorPage from "./ErrorPage";
 import Card from "./Card";
 import Users from "./Users";
 import QuestionsAndAnswers from "./QuestionsAndAnswers";
+import DictionaryApp from "./DictionaryApp";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/quiz" element={<QuestionsAndAnswers />} />
           <Route path="/" element={<Jokes />} />
+          <Route path="dictionary" element={<DictionaryApp />} />
           <Route path="/in" element={<Navigate to="/Jokes" />} />
           <Route path="/user/:username" element={<Users/>}/>
           <Route path="/*" element={<ErrorPage />} />

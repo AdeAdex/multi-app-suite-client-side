@@ -5,9 +5,6 @@ import { useEffect } from "react";
 const Jokes = () => {
   const endpoint =
     "https://v2.jokeapi.dev/joke/Any?type=single&fbclid=IwAR0rXrfhchsotkwWKqWdS4lQx4liT647rySgCagfQF2dI1p7IaQ67J_i9sM";
-  const endpoint2 =
-    "https://opentdb.com/api.php?amount=50&category=15&type=multiple";
-  const endpoint4 = "https://api.dictionaryapi.dev/api/v2/entries/en/word";
   const [response, setresponse] = useState([]);
   useEffect(() => {
     getData();
@@ -18,7 +15,6 @@ const Jokes = () => {
       .get(endpoint)
       .then((result) => {
         setresponse(result.data);
-        console.log(result);
       })
       .catch((err) => {
         console.error(err);
