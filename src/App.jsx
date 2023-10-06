@@ -32,8 +32,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Portal />} />
-          <Route path="/Jokes" element={<Jokes />} />
+          <Route path="/portal" element={<Portal />} />
+          <Route path="/" element={<Jokes />} />
           <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/in" element={<Navigate to="/Jokes" />} />
           <Route path="/user/:username" element={<Users/>}/>
