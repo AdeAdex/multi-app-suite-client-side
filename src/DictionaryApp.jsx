@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 const DictionaryApp = () => {
   const [word, setWord] = useState("");
   const [definitions, setDefinitions] = useState([]);
+  const [phonetics, setPhonetics] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
@@ -15,14 +16,17 @@ const DictionaryApp = () => {
       );
 
       if (response.data.length > 0) {
-        setDefinitions(response.data[0].meanings);
-        console.log(response.data);
+        const data = response.data[0];
+        setDefinitions(data.meanings);
+        setPhonetics(data.phonetics);
       } else {
         setDefinitions([]);
+        setPhonetics([]);
       }
     } catch (error) {
       console.error(error);
       setDefinitions([]);
+      setPhonetics([]);
     } finally {
       setLoading(false);
     }
@@ -35,8 +39,7 @@ const DictionaryApp = () => {
   }, [word]);
 
   return (
-    <>
-      <div className="dictionary-app">
+    <div className="dictionary-app">
       <h1 className="app-title">Dictionary App</h1>
       <div className="search-bar">
         <input
@@ -49,6 +52,22 @@ const DictionaryApp = () => {
           Search
         </button>
       </div>
+      {phonetics.length > 0 && (
+        <div className="phonetics">
+          <h2>Phonetics:</h2>
+          {phonetics.map((phonetic, index) => (
+            <div key={index}>
+              <p>{phonetic.text}</p>
+              {phonetic.audio && (
+                <audio controls>
+                  <source src={phonetic.audio} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
       {loading ? (
         <p className="loading-text">Loading...</p>
       ) : (
@@ -72,7 +91,6 @@ const DictionaryApp = () => {
         </div>
       )}
     </div>
-    </>
   );
 };
 
