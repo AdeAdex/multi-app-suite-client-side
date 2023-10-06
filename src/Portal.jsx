@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Portal = () => {
   const [firstname, setFirstname] = useState("");
@@ -14,6 +16,11 @@ const Portal = () => {
     setAllStudent([...allStudent, newStudent]);
     console.log(allStudent);
   };
+
+  const navigate = useNavigate()
+  const go = () => {
+    navigate('/Jokes')
+  }
 
   return (
     <>
@@ -60,13 +67,15 @@ const Portal = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="form-group my-3">
+          <div className="form-group my-3 ">
             <button type="submit" className="btn btn-success w-100">
               submit
             </button>
+            <Link to="/TextToSpeech"><button className="btn btn-primary w-100 mt-3">Next</button></Link>
           </div>
         </form>
       </div>
+        <button onClick={go}>Go to Sign In</button>
 
       <table className="table table-striped table-bordered mt-4">
         <thead>
