@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { FaSearch } from 'react-icons/fa';
-
+import { FaSearch } from "react-icons/fa";
 
 const DictionaryApp = () => {
   const [word, setWord] = useState("");
@@ -48,17 +47,23 @@ const DictionaryApp = () => {
     <div className="dictionary-app">
       <h1 className="app-title">Dictionary App</h1>
       <div className="search-bar">
-  <input
-    type="text"
-    placeholder="Enter a word"
-    value={word}
-    onChange={(e) => setWord(e.target.value)}
-  />
-  <button className="search-button" onClick={fetchData}>
-    <span className="search-text">Search</span>
-    <FaSearch className="search-icon" />
-  </button>
-</div>
+        <input
+          type="text"
+          placeholder="Enter a word"
+          value={word}
+          onChange={(e) => setWord(e.target.value)}
+        />
+        <button className="search-button" onClick={fetchData}>
+          {window.innerWidth <= 768 ? (
+            <FaSearch className="search-icon" />
+          ) : (
+            <>
+              <span className="search-text">Search</span>
+              <FaSearch className="search-icon" />
+            </>
+          )}
+        </button>
+      </div>
 
       {phonetics.length > 0 && (
         <div className="phonetics">
