@@ -20,3 +20,96 @@
   font-size: 18px;
   color: #333; /* Text color for the message */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset some default browser styles */
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      
+      /* Center the quiz section on large screens */
+      .quiz-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      /* Style the quiz container */
+      .quiz-container {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        max-width: 600px;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      /* Style the question card */
+      .question-card {
+        margin-bottom: 20px;
+      }
+      
+      .question-card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .question-card p {
+        font-size: 18px;
+        color: #333;
+      }
+      
+      /* Style the answer buttons */
+      .answer-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .answer-options button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .answer-options button:hover {
+        background-color: #0056b3;
+      }
+      
+      /* Style the quiz summary */
+      .quiz-summary {
+        margin: 20px 0;
+      }
+      
+      .quiz-summary h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      
+      .quiz-summary p {
+        font-size: 18px;
+        color: #333;
+      }
+      
