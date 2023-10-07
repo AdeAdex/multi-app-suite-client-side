@@ -16,6 +16,8 @@ import ErrorPage from "./ErrorPage";
 import Users from "./Users";
 import QuestionsAndAnswers from "./QuestionsAndAnswers";
 import DictionaryApp from "./DictionaryApp";
+import TextTranslation from "./TextTranslation";
+import FootballMatches from "./FootballMatches";
 
 function App() {
 
@@ -26,7 +28,9 @@ function App() {
         <Routes>
           <Route path="/quiz" element={<QuestionsAndAnswers />} />
           <Route path="/" element={<Jokes />} />
+          <Route path="/text-translator" element={<TextTranslation/>}/>
           <Route path="dictionary" element={<DictionaryApp />} />
+          <Route path="/football-matches" element={<FootballMatches />} />
           <Route path="/in" element={<Navigate to="/Jokes" />} />
           <Route path="/user/:username" element={<Users/>}/>
           <Route path="/*" element={<ErrorPage />} />

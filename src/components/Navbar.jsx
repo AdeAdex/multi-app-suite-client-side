@@ -43,6 +43,11 @@ const Navbar = () => {
                   Dictionary
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/football-matches" className="nav-link">
+                  Football Matches
+                </Link>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               <input

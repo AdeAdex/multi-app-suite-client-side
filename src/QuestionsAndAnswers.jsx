@@ -11,10 +11,12 @@ const QuestionsAndAnswers = () => {
     fetchData();
   }, []);
 
+  // "https://opentdb.com/api.php?amount=10&category=15&type=multiple"
+
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://opentdb.com/api.php?amount=10&category=15&type=multiple"
+        "https://opentdb.com/api.php?amount=20"
       );
       setQuestions(response.data.results);
     } catch (error) {
