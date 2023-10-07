@@ -19,9 +19,19 @@
 .error-container p {
   font-size: 18px;
   color: #333; /* Text color for the message */
+
+
+
+
+
+
+
+
+
+
 }
 
-/* Center the quiz section on large screens */
+/* the quiz section on large screens */
 .quiz-section {
   display: flex;
   justify-content: center;
@@ -93,6 +103,47 @@
   color: #333;
 }
 
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-5px, 5px); }
+  50% { transform: translate(5px, -5px); }
+  75% { transform: translate(-5px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shaking-image {
+  animation: shake 2s ease infinite;
+}
+
+
+@keyframes reading {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.8;
+  }
+}
+
+.reading-image {
+  animation: reading 2s ease infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* DictionaryApp.css */
 
 .dictionary-app {
@@ -162,6 +213,8 @@ input[type="text"] {
   font-size: 18px;
   color: #333;
 }
+
+
 
 @media (max-width: 768px) {
   .search-bar {
