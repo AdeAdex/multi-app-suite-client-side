@@ -8,7 +8,9 @@ const FootballMatches = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://footbal-matches-adex2210.vercel.app/api/football-matches');
+        // const response = await axios.get('https://footbal-matches-adex2210.vercel.app/api/football-matches');
+        const response = await axios.get('/api/football-matches'); // Requests to your Node.js backend
+
 
         // Update the state with the fetched data
         setMatches(response.data);
