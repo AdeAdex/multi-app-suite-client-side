@@ -53,7 +53,7 @@ const QuestionsAndAnswers = () => {
     borderRadius: '5px',
     height: '200px',
     position: 'relative',
-    backgroundImage: 'url("/public/firework-2.gif")', 
+    backgroundImage: 'url("firework-2.gif")', 
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
@@ -101,7 +101,6 @@ const QuestionsAndAnswers = () => {
             <p>Your Score: {score} / 10</p>
             {score >= 2 ? (
               <div className="position-relative " style={divStyle}>
-                {/* <img src="congrats3.gif" alt="" style={{width: '100%', height: '100%', }}/> */}
                 <img src="congrats2.gif" alt=""  style={{position: 'absolute', right: '10px', bottom: '10px', width: '100px', zIndex: '2'}}/>
                 <img src="congrats3.gif" className="position-absolute" alt="" style={{height: '100%', left: '0', width: '100%', right: '0', top: '0', bottom: '0'}} />
               </div>
