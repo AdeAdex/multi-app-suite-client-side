@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const FootballMatches = () => {
   const [matches, setMatches] = useState([]);
-  const API_KEY = 'YOUR_API_KEY'; // Replace with your API key
+  const API_KEY = '70f5fc17b1374351b458e3f71cb76249';
 
   useEffect(() => {
     const fetchData = async () => {
