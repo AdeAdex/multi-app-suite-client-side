@@ -14,7 +14,7 @@ const QuestionsAndAnswers = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://opentdb.com/api.php?amount=50&category=9&type=boolean"
+        "https://opentdb.com/api.php?amount=10&category=15&type=multiple"
       );
       setQuestions(response.data.results);
     } catch (error) {
@@ -46,6 +46,17 @@ const QuestionsAndAnswers = () => {
 
     // Move to the next question
     setCurrentQuestionIndex(currentQuestionIndex + 1);
+  };
+
+
+  const divStyle = {
+    // backgroundColor: 'black',
+    borderRadius: '5px',
+    height: '200px',
+    position: 'relative',
+    backgroundImage: 'url("congrats3.gif")', // Set the background image
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
   };
 
   return (
@@ -88,7 +99,16 @@ const QuestionsAndAnswers = () => {
         ) : (
           <div className="quiz-summary">
             <h2>Quiz Completed! 🎉</h2>
-            <p>Your Score: {score} / 50</p>
+            <p>Your Score: {score} / 10</p>
+            {score >= 2 ? (
+              <div className="position-relative " style={divStyle}>
+                <img src="congrats3.gif" alt="" style={{width: '100%', height: '100%', }}/>
+                <img src="congrats2.gif" alt=""  style={{position: 'absolute', right: '10px', bottom: '10px', width: '100px', zIndex: '2'}}/>
+                <img src="firework-2.gif" className="position-absolute" alt="" style={{height: '100%', left: '0', width: '100%', right: '0', top: '0', bottom: '0'}} />
+              </div>
+            ) : (
+              <div>ko jooo</div>
+            )}
 
             <div className="user-choices">
               <h3>Your Choices:</h3>
@@ -96,13 +116,12 @@ const QuestionsAndAnswers = () => {
                 {userChoices.map((choice, index) => (
                   <li key={index}>
                     <strong>Question:</strong> {choice.question} <br />
-                    <strong>Your Choice:</strong> {choice.choice} <br />
-                    <strong>Correct Answer:</strong> {choice.correctAnswer}
-                    {choice.isCorrect ? (
+                    <strong>Your Choice:</strong> {choice.choice} {choice.isCorrect ? (
                       <span className="correct-answer"> (Correct) 😄</span>
                     ) : (
                       <span className="incorrect-answer"> (Incorrect) 😞</span>
-                    )}
+                    )} <br />
+                    <strong>Correct Answer:</strong> {choice.correctAnswer}
                   </li>
                 ))}
               </ul>
