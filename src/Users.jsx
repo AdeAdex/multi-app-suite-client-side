@@ -5,7 +5,7 @@ const Users = () => {
   let name = useParams();
   return (
     <>
-      <div>Welcome {name.username}</div>
+      <div className="text-center" style={{marginTop: '100px'}}>Welcome {name.username}</div>
     </>
   );
 };
