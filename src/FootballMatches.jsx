@@ -1,3 +1,4 @@
+// front-end
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -7,14 +8,10 @@ const FootballMatches = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.football-data.org/v4/matches', {
-          headers: {
-            'X-Auth-Token': '70f5fc17b1374351b458e3f71cb76249', // Replace with your API key
-          },
-        });
+        const response = await axios.get('https://footbal-matches-adex2210.vercel.app/api/football-matches');
 
         // Update the state with the fetched data
-        setMatches(response.data.matches);
+        setMatches(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
