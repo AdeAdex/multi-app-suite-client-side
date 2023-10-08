@@ -1,50 +1,80 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDisclosure } from '@mantine/hooks';
+import { Burger } from "@mantine/core";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light" style={{position: 'fixed', top: '0', left: '0', width: '100%'}}>
+      <nav
+        className={`navbar navbar-expand-lg bg-light ${
+          isMenuOpen ? "show" : ""
+        }`}
+        style={{ position: "fixed", top: "0", left: "0", width: "100%" }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img src="ade.png" alt="" style={{ width: "50px" }} />
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          <Burger opened={isMenuOpen} onClick={toggleMenu} aria-label="Toggle navigation" />
+          <div
+            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+            id="navbarSupportedContent"
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/"
+                  onClick={closeMenu}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <Link
+                  to="/"
+                  className="nav-link"
+                  onClick={closeMenu}
+                >
                   Jokes
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/quiz" className="nav-link">
+                <Link
+                  to="/quiz"
+                  className="nav-link"
+                  onClick={closeMenu}
+                >
                   Quiz
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/dictionary" className="nav-link">
+                <Link
+                  to="/dictionary"
+                  className="nav-link"
+                  onClick={closeMenu}
+                >
                   Dictionary
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/football-matches" className="nav-link">
+                <Link
+                  to="/football-matches"
+                  className="nav-link"
+                  onClick={closeMenu}
+                >
                   Football Matches
                 </Link>
               </li>
