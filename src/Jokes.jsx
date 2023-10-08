@@ -43,7 +43,7 @@ const Jokes = () => {
         className="w-100 d-flex"
         style={{ height: "100vh", backgroundColor: "#F2F2F2" }}
       >
-        <div className="container-fluid d-flex flex-column align-items-center justify-content-center h-75" style={{marginTop: '100px'}}>
+        <div className="container-fluid d-flex flex-column align-items-center justify-content-center h-75" >
           <h1 className="text-center text-bold mb-4">
             Welcome to the Jokes App <img src="emoji.png" alt="Laughing Emoji" style={{width: '100px'}}/>
           </h1>
