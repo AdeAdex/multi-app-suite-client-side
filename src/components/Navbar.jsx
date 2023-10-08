@@ -36,7 +36,7 @@ function Navbar(props) {
             <img src="ade.png" alt="" style={{ width: "50px" }} />
          </Link>
       </Typography>
-      <Divider style={{}} />
+      <Divider sx={{ backgroundColor: 'white' }}/>
       <List>
         {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
