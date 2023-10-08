@@ -1,3 +1,4 @@
+
 .error-container {
   display: flex;
   justify-content: center;
@@ -242,8 +243,14 @@ input[type="text"] {
 
 
 /* Football Matches Container */
+
+
+#football-matches-page {
+  background-color: black;
+}
+
 .football-matches-container {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -256,6 +263,15 @@ input[type="text"] {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+.league-heading {
+  color: whitesmoke;
+}
+
+.league-country-name {
+  color: rgb(171, 163, 163);
 }
 
 /* Matches List */
@@ -266,7 +282,7 @@ input[type="text"] {
 
 /* Match Item */
 .match-item {
-  background-color: #fff;
+  background-color: #111111;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
@@ -274,6 +290,7 @@ input[type="text"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: rgb(145, 142, 142);
 }
 
 /* Team Info */

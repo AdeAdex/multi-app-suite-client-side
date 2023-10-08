@@ -114,7 +114,7 @@ const FootballMatches = () => {
     };
     matches.forEach((match) => {
       const competitionName = match.competition?.name || 'Others';
-      const leagueCountryName = match.area?.name || 'Unknown'; // Include area.name as league-country-name
+      const leagueCountryName = match.area || 'Unknown'; // Include area.name as league-country-name
       if (groupedMatches.hasOwnProperty(competitionName)) {
         groupedMatches[competitionName].push({ ...match, leagueCountryName });
       } else {
@@ -128,15 +128,19 @@ const FootballMatches = () => {
 
   return (
     <>
-      <div className="football-matches-container">
+    <div id="football-matches-page" className="">
+    <div className="football-matches-container">
         <h1 className="matches-heading text-center">Football Matches Update</h1>
         {Object.keys(groupedMatches).map((leagueName) => (
           <div key={leagueName}>
             <div className="league-info d-flex justify-content-between me-3">
+            <div className='d-flex gap-3'>
+            <img src={groupedMatches[leagueName][0]?.leagueCountryName.flag} alt="" style={{width: '30px'}} />
               <div>
-                <h2 className="league-heading">{leagueName}</h2>
-                <small className='league-country-name'>{groupedMatches[leagueName][0]?.leagueCountryName}</small>
+                <h5 className="league-heading"> <strong>{leagueName}</strong></h5>
+                <small className='league-country-name'>{groupedMatches[leagueName][0]?.leagueCountryName.name}</small>
               </div>
+            </div>
               <img className="league-flag" src={groupedMatches[leagueName][0]?.competition?.emblem} alt={leagueName} style={{ width: '50px' }} />
             </div>
             <ul className="matches-list">
@@ -183,6 +187,7 @@ const FootballMatches = () => {
           </div>
         ))}
       </div>
+    </div>
     </>
   );
 };
