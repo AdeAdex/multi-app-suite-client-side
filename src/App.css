@@ -237,3 +237,93 @@ input[type="text"] {
     display: inline-block;
   }
 }
+
+
+
+
+/* Football Matches Container */
+.football-matches-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 80px auto;
+}
+
+/* Matches Heading */
+.matches-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Matches List */
+.matches-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Match Item */
+.match-item {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Team Info */
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team-crest {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+/* Score */
+.match-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner-text {
+  color: green;
+  font-weight: bold;
+}
+
+.score-text {
+  font-size: 18px;
+}
+
+/* Competition Info */
+.competition-info {
+  flex: 1;
+}
+
+.competition-name {
+  font-weight: bold;
+}
+
+.match-location {
+  font-style: italic;
+  color: #555;
+}
+
+/* Match Status and Date */
+.match-status,
+.match-date {
+  font-weight: bold;
+}
