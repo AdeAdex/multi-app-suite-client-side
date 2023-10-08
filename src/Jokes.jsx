@@ -43,16 +43,18 @@ const Jokes = () => {
         className="w-100 d-flex"
         style={{ height: "100vh", backgroundColor: "#F2F2F2" }}
       >
-        <div className="container-fluid d-flex flex-column align-items-center justify-content-center h-75" style={{marginTop: '50px'}}>
+        <div
+          className="container-fluid d-flex flex-column align-items-center justify-content-center h-75"
+          style={{ marginTop: "50px" }}
+        >
           <h1 className="text-center text-bold mb-4">
-            Welcome to the Jokes App <img src="emoji.png" alt="Laughing Emoji" style={{width: '100px'}}/>
+            Welcome to the Jokes App{" "}
+            <img
+              src="emoji.png"
+              alt="Laughing Emoji"
+              style={{ width: "100px" }}
+            />
           </h1>
-          <button
-            className={`btn btn-primary my-4 col-lg-3 col-md-12 col-sm-12 ${isLoading ? 'disabled' : ''}`}
-            onClick={getData}
-          >
-            {isLoading ? "Generating..." : "Generate a Joke 🎉"}
-          </button>
           {response.id && (
             <div className="container bg-white shadow p-4 rounded-lg text-center">
               <h3 className="mb-3">Here's a Joke for You:</h3>
@@ -63,12 +65,20 @@ const Jokes = () => {
               >
                 Category: "{response.category}"
               </div>
+              <div className="mt-3 gap-3 d-flex justify-content-center">
               <button
-                className="btn btn-success mt-3"
-                onClick={shareJoke}
+                className={`btn btn-primary my-4   ${
+                  isLoading ? "disabled" : ""
+                }`}
+                onClick={getData}
               >
+                {isLoading ? "Generating..." : "Next Joke 🎉"}
+              </button>
+              <button className="btn btn-success my-4" onClick={shareJoke}>
                 Share this Joke 🚀
               </button>
+              </div>
+             
             </div>
           )}
         </div>
