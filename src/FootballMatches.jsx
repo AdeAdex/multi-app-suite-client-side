@@ -141,7 +141,7 @@ const FootballMatches = () => {
                 <small className='league-country-name'>{groupedMatches[leagueName][0]?.leagueCountryName.name}</small>
               </div>
             </div>
-              <img className="league-flag" src={groupedMatches[leagueName][0]?.competition?.emblem} alt={leagueName} style={{ width: '50px' }} />
+              <img className="league-flag" src={groupedMatches[leagueName][0]?.competition?.emblem} alt={leagueName} />
             </div>
             <ul className="matches-list">
               {groupedMatches[leagueName].map((match) => (
