@@ -9,7 +9,7 @@ const FootballMatches = () => {
     const fetchData = async () => {
       try {
         // const response = await axios.get('https://footbal-matches-adex2210.vercel.app/api/football-matches');
-        const response = await axios.get('/api/football-matches'); // Requests to your Node.js backend
+        const response = await axios.get('/api/football-matches');
 
         setMatches(response.data);
       } catch (error) {
