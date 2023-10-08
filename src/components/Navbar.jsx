@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Jokes', 'Quiz', 'Dictionary', 'Football Matches'];
-const navLinks = ['/', '/jokes', '/quiz', '/dictionary', '/football-matches'];
+const navLinks = ['/football-matches', '/jokes', '/quiz', '/dictionary', '/football-matches'];
 
 function Navbar(props) {
   const { window } = props;
@@ -32,7 +32,7 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand" to="/football-matches">
             <img src="ade.png" alt="" style={{ width: "50px" }} />
          </Link>
       </Typography>
@@ -72,7 +72,7 @@ function Navbar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/football-matches">
             <img src="ade.png" alt="" style={{ width: "50px" }} />
          </Link>
           </Typography>
