@@ -1,7 +1,6 @@
 // front-end
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './FootballMatches.css'; // Import your CSS file
 
 const FootballMatches = () => {
   const [matches, setMatches] = useState([]);
