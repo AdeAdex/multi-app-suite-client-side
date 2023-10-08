@@ -88,7 +88,7 @@ const FootballMatches = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://multi-app-suite-server-side.vercel.app/api/football-matches');
-        // console.log('Response data:', response.data.matches); 
+        console.log('Response data:', response.data.matches); 
         setMatches(response.data.matches);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -177,10 +177,12 @@ const FootballMatches = () => {
                     </div>
                   </div>
                   <div className="match-info">
-                    {match.status !== 'FINISHED' && (
-                      <p className="match-date">Match starts on {new Date(match.utcDate).toLocaleDateString()}</p>
-                    )}
-                  </div>
+  {match.status !== 'FINISHED' && (
+    <p className="match-date">Match starts on {new Date(match.utcDate).toLocaleString()}</p>
+  )}
+</div>
+
+
                 </li>
               ))}
             </ul>
