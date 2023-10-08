@@ -27,7 +27,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/quiz" element={<QuestionsAndAnswers />} />
-          <Route path="/" element={<Jokes />} />
+          <Route path="/jokes" element={<Jokes />} />
+          <Route path="/" element={<FootballMatches />} />
           <Route path="/text-translator" element={<TextTranslation/>}/>
           <Route path="dictionary" element={<DictionaryApp />} />
           <Route path="/football-matches" element={<FootballMatches />} />
