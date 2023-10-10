@@ -74,6 +74,30 @@
 
 // export default FootballMatches;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -84,7 +108,7 @@ const FootballMatches = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/football-matches/"
+          "https://multi-app-suite-server-side-adex2210.vercel.app/api/football-matches"
           );
         console.log("Response data:", response);
         // setMatches(response.data.matches);
