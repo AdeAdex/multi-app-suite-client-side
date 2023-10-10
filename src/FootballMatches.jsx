@@ -84,8 +84,8 @@ const FootballMatches = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/football-matches"
-        );
+          "http://localhost:3000/api/football-matches/"
+          );
         console.log("Response data:", response);
         // setMatches(response.data.matches);
       } catch (error) {
