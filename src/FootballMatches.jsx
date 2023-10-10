@@ -110,7 +110,7 @@ const FootballMatches = () => {
         const response = await axios.get(
           "https://multi-app-suite-server-side-adex2210.vercel.app/api/football-matches"
           );
-        console.log("Response data:", response);
+        console.log("Response:", response);
         // setMatches(response.data.matches);
       } catch (error) {
         console.error("Error fetching data:", error);
