@@ -21,7 +21,6 @@ const FootballMatches = () => {
     fetchData();
   }, []);
 
-  // Create a function to group matches by league name
   const groupMatchesByLeague = (matches) => {
     const groupedMatches = {
       "Premier League": [],
