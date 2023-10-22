@@ -1,6 +1,6 @@
-# TriApp Suite (Jokes App, Question and Answer Quiz App, Dictionary App )
+# MultiApp Suite (Jokes App, Question and Answer Quiz App, Dictionary App )
 
-This project consists of three distinct applications, each designed to serve a unique purpose and provide valuable functionality.
+This project consists of many distinct applications, each designed to serve a unique purpose and provide valuable functionality.
 
 **Jokes App**
 
